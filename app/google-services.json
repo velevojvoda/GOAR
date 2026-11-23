@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "311065108043",
+    "project_id": "goar-2e942",
+    "storage_bucket": "goar-2e942.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:311065108043:android:1cd6ca79fa0239d815b7ce",
+        "android_client_info": {
+          "package_name": "com.example.goar"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCr-I5kHD90aMaLC6GDrv96z8IR2xQdHRQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
