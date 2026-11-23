@@ -17,6 +17,7 @@ import androidx.navigation.ui.NavigationUI;
 
 import com.example.goar.R;
 import com.example.goar.data.model.User;
+import com.example.goar.data.repository.FirestoreSeeder;
 import com.example.goar.data.repository.SessionManager;
 import com.example.goar.databinding.ActivityMainBinding;
 import com.example.goar.databinding.NavHeaderBinding;
@@ -52,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
 
         setupDrawer();
         setupBackPress();
+        FirestoreSeeder.seedIfEmpty();
     }
 
     private void setupDrawer() {
