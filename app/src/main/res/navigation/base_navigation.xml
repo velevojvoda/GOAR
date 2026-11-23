@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/base_navigation"
+    app:startDestination="@id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.goar.ui.fragments.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_search"
+        android:name="com.example.goar.ui.fragments.search.SearchFragment"
+        android:label="@string/title_search"
+        tools:layout="@layout/fragment_search" />
+
+    <fragment
+        android:id="@+id/nav_map"
+        android:name="com.example.goar.ui.fragments.map.MapFragment"
+        android:label="@string/title_map"
+        tools:layout="@layout/fragment_map" />
+
+    <fragment
+        android:id="@+id/nav_pantry"
+        android:name="com.example.goar.ui.fragments.pantry.PantryFragment"
+        android:label="@string/title_pantry"
+        tools:layout="@layout/fragment_pantry" />
+
+    <fragment
+        android:id="@+id/nav_shopping"
+        android:name="com.example.goar.ui.fragments.shopping.ShoppingListsFragment"
+        android:label="@string/title_shopping"
+        tools:layout="@layout/fragment_shopping_lists" />
+
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.example.goar.ui.fragments.profile.ProfileFragment"
+        android:label="@string/title_profile"
+        tools:layout="@layout/fragment_profile" />
+
+    <fragment
+        android:id="@+id/nav_favorites"
+        android:name="com.example.goar.ui.fragments.profile.FavoritesFragment"
+        android:label="@string/title_favorites"
+        tools:layout="@layout/fragment_favorites" />
+
+    <fragment
+        android:id="@+id/nav_my_reports"
+        android:name="com.example.goar.ui.fragments.reports.MyReportsFragment"
+        android:label="@string/title_my_reports"
+        tools:layout="@layout/fragment_my_reports" />
+
+    <fragment
+        android:id="@+id/nav_notifications"
+        android:name="com.example.goar.ui.fragments.notifications.NotificationsFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_notifications" />
+
+    <fragment
+        android:id="@+id/nav_admin"
+        android:name="com.example.goar.ui.fragments.admin.AdminFragment"
+        android:label="@string/title_admin"
+        tools:layout="@layout/fragment_admin" />
+
+</navigation>

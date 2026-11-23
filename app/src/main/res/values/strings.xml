@@ -1,3 +1,33 @@
 <resources>
     <string name="app_name">GOAR</string>
+
+    <string name="title_home">Home</string>
+    <string name="title_search">Search</string>
+    <string name="title_map">Map</string>
+    <string name="title_pantry">Pantry</string>
+    <string name="title_shopping">Shopping</string>
+    <string name="title_profile">Profile</string>
+    <string name="title_favorites">Favorites</string>
+    <string name="title_my_reports">My reports</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_admin">Admin panel</string>
+    <string name="title_logout">Logout</string>
+
+    <string name="placeholder_home">Home – Student 3</string>
+    <string name="placeholder_search">Search – Student 2</string>
+    <string name="placeholder_map">Map – Student 3</string>
+    <string name="placeholder_pantry">Pantry – Student 2</string>
+    <string name="placeholder_shopping">Shopping lists – Student 2</string>
+    <string name="placeholder_profile">Profile – Student 1</string>
+    <string name="placeholder_favorites">Favorites – Student 1</string>
+    <string name="placeholder_my_reports">My reports – Student 2</string>
+    <string name="placeholder_notifications">Notifications – Student 3</string>
+    <string name="placeholder_admin">Admin panel – Student 3</string>
+
+    <string name="role_admin">Administrator</string>
+    <string name="role_user">User</string>
+    <string name="logged_out">Logged out</string>
+    <string name="navigation_drawer_open">Open navigation menu</string>
+    <string name="navigation_drawer_close">Close navigation menu</string>
+    <string name="profile_image">Profile image</string>
 </resources>
