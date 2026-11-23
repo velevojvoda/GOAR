@@ -3,21 +3,21 @@ package com.example.goar.data.model;
 import java.time.LocalDateTime;
 
 public class AppNotification {
-    private long id;
+    private String id;
     private String title;
     private String message;
     private LocalDateTime createdAt;
     private boolean read;
 
-    public AppNotification(long id, String title, String message, LocalDateTime createdAt) {
+    public AppNotification(String id, String title, String message, LocalDateTime createdAt) {
         this.id = id;
         this.title = title;
         this.message = message;
         this.createdAt = createdAt;
     }
 
-    public long getId() { return id; }
-    public void setId(long id) { this.id = id; }
+    public String getId() { return id; }
+    public void setId(String id) { this.id = id; }
 
     public String getTitle() { return title; }
     public void setTitle(String title) { this.title = title; }

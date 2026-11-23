@@ -5,15 +5,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Comment {
-    private long id;
-    private long recipeId;
+    private String id;
+    private String recipeId;
     private User author;
     private String text;
     private List<String> imageUrls = new ArrayList<>();
     private LocalDateTime createdAt;
-    private Long parentCommentId;
+    private String parentCommentId;
 
-    public Comment(long id, long recipeId, User author, String text, LocalDateTime createdAt) {
+    public Comment(String id, String recipeId, User author, String text, LocalDateTime createdAt) {
         this.id = id;
         this.recipeId = recipeId;
         this.author = author;
@@ -23,11 +23,11 @@ public class Comment {
 
     public boolean isReply() { return parentCommentId != null; }
 
-    public long getId() { return id; }
-    public void setId(long id) { this.id = id; }
+    public String getId() { return id; }
+    public void setId(String id) { this.id = id; }
 
-    public long getRecipeId() { return recipeId; }
-    public void setRecipeId(long recipeId) { this.recipeId = recipeId; }
+    public String getRecipeId() { return recipeId; }
+    public void setRecipeId(String recipeId) { this.recipeId = recipeId; }
 
     public User getAuthor() { return author; }
     public void setAuthor(User author) { this.author = author; }
@@ -41,6 +41,6 @@ public class Comment {
     public LocalDateTime getCreatedAt() { return createdAt; }
     public void setCreatedAt(LocalDateTime createdAt) { this.createdAt = createdAt; }
 
-    public Long getParentCommentId() { return parentCommentId; }
-    public void setParentCommentId(Long parentCommentId) { this.parentCommentId = parentCommentId; }
+    public String getParentCommentId() { return parentCommentId; }
+    public void setParentCommentId(String parentCommentId) { this.parentCommentId = parentCommentId; }
 }

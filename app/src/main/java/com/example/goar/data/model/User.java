@@ -1,7 +1,7 @@
 package com.example.goar.data.model;
 
 public class User {
-    private long id;
+    private String id;
     private String username;
     private String email;
     private String profileImageUrl;
@@ -9,7 +9,7 @@ public class User {
     private String bio;
     private Role role;
 
-    public User(long id, String username, String email, String region, Role role) {
+    public User(String id, String username, String email, String region, Role role) {
         this.id = id;
         this.username = username;
         this.email = email;
@@ -19,8 +19,8 @@ public class User {
 
     public boolean isAdmin() { return role == Role.ADMIN; }
 
-    public long getId() { return id; }
-    public void setId(long id) { this.id = id; }
+    public String getId() { return id; }
+    public void setId(String id) { this.id = id; }
 
     public String getUsername() { return username; }
 

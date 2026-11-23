@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Recipe {
-    private long id;
+    private String id;
     private String name;
     private User author;
     private MealType mealType;
@@ -26,10 +26,10 @@ public class Recipe {
     private String authorRegion;
     private LocalDateTime createdAt;
 
-    private Long originalRecipeId;
+    private String originalRecipeId;
     private String modificationNote;
 
-    public Recipe(long id, String name, User author, MealType mealType, DishType dishType,
+    public Recipe(String id, String name, User author, MealType mealType, DishType dishType,
                   DietType dietType, int servings, int totalTimeMinutes) {
         this.id = id;
         this.name = name;
@@ -43,8 +43,8 @@ public class Recipe {
         this.createdAt = LocalDateTime.now();
     }
 
-    public long getId() { return id; }
-    public void setId(long id) { this.id = id; }
+    public String getId() { return id; }
+    public void setId(String id) { this.id = id; }
 
     public String getName() { return name; }
     public void setName(String name) { this.name = name; }
@@ -100,8 +100,8 @@ public class Recipe {
     public LocalDateTime getCreatedAt() { return createdAt; }
     public void setCreatedAt(LocalDateTime createdAt) { this.createdAt = createdAt; }
 
-    public Long getOriginalRecipeId() { return originalRecipeId; }
-    public void setOriginalRecipeId(Long originalRecipeId) { this.originalRecipeId = originalRecipeId; }
+    public String getOriginalRecipeId() { return originalRecipeId; }
+    public void setOriginalRecipeId(String originalRecipeId) { this.originalRecipeId = originalRecipeId; }
 
     public String getModificationNote() { return modificationNote; }
     public void setModificationNote(String modificationNote) { this.modificationNote = modificationNote; }
