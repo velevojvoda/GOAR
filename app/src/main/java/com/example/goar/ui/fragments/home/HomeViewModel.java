@@ -4,11 +4,14 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
+import com.example.goar.data.model.PantryItem;
 import com.example.goar.data.model.Recipe;
 import com.example.goar.data.model.RecipeIngredient;
 import com.example.goar.data.repository.MockData;
+import com.example.goar.data.repository.PantryRepository;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
@@ -56,7 +59,7 @@ public class HomeViewModel extends ViewModel {
                 result = byIds(RecentRecipesTracker.getRecentlyCookedIds());
                 break;
             case CAN_MAKE:
-                result = canMake(all, RecentRecipesTracker.getPantryIngredientIds());
+                result = canMake(all, pantryIngredientIds());
                 break;
             case POPULAR:
             default:
@@ -82,14 +85,14 @@ public class HomeViewModel extends ViewModel {
         List<Recipe> result = new ArrayList<>(all);
         result.sort((a, b) -> {
             int byDate = b.getCreatedAt().compareTo(a.getCreatedAt());
-            return byDate != 0 ? byDate : Long.compare(b.getId(), a.getId());
+            return byDate != 0 ? byDate : b.getId().compareTo(a.getId());
         });
         return result;
     }
 
-    private List<Recipe> byIds(List<Long> ids) {
+    private List<Recipe> byIds(List<String> ids) {
         List<Recipe> result = new ArrayList<>();
-        for (Long id : ids) {
+        for (String id : ids) {
             Recipe recipe = MockData.getRecipeById(id);
             if (recipe != null) {
                 result.add(recipe);
@@ -98,11 +101,23 @@ public class HomeViewModel extends ViewModel {
         return result;
     }
 
+    /** Ids of ingredients the user has in his pantry (Student 2's PantryRepository). */
+    private Set<String> pantryIngredientIds() {
+        Set<String> ids = new HashSet<>();
+        List<PantryItem> items = PantryRepository.getInstance().getItems().getValue();
+        if (items != null) {
+            for (PantryItem item : items) {
+                ids.add(item.getIngredient().getId());
+            }
+        }
+        return ids;
+    }
+
     /**
      * Recipes for which the user has all ingredients.
      * Ingredients without quantity ("salt to taste") are not required.
      */
-    private List<Recipe> canMake(List<Recipe> all, Set<Long> pantryIds) {
+    private List<Recipe> canMake(List<Recipe> all, Set<String> pantryIds) {
         List<Recipe> result = new ArrayList<>();
         for (Recipe recipe : all) {
             boolean hasAll = true;
