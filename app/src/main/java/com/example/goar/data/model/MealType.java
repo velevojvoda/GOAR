@@ -3,16 +3,16 @@ package com.example.goar.data.model;
 import androidx.annotation.NonNull;
 
 public class MealType {
-    private long id;
+    private String id;
     private String name;
 
-    public MealType(long id, String name) {
+    public MealType(String id, String name) {
         this.id = id;
         this.name = name;
     }
 
-    public long getId() { return id; }
-    public void setId(long id) { this.id = id; }
+    public String getId() { return id; }
+    public void setId(String id) { this.id = id; }
 
     public String getName() { return name; }
     public void setName(String name) { this.name = name; }

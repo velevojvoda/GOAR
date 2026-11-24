@@ -3,16 +3,16 @@ package com.example.goar.data.model;
 import java.time.LocalDateTime;
 
 public class Report {
-    private long id;
+    private String id;
     private ReportTargetType targetType;
-    private long targetId;
+    private String targetId;
     private String reason;
     private User reporter;
     private LocalDateTime createdAt;
     private ReportStatus status;
     private String rejectionReason;
 
-    public Report(long id, ReportTargetType targetType, long targetId, String reason,
+    public Report(String id, ReportTargetType targetType, String targetId, String reason,
                   User reporter, LocalDateTime createdAt) {
         this.id = id;
         this.targetType = targetType;
@@ -25,14 +25,14 @@ public class Report {
 
     public boolean canBeWithdrawn() { return status == ReportStatus.NEW; }
 
-    public long getId() { return id; }
-    public void setId(long id) { this.id = id; }
+    public String getId() { return id; }
+    public void setId(String id) { this.id = id; }
 
     public ReportTargetType getTargetType() { return targetType; }
     public void setTargetType(ReportTargetType targetType) { this.targetType = targetType; }
 
-    public long getTargetId() { return targetId; }
-    public void setTargetId(long targetId) { this.targetId = targetId; }
+    public String getTargetId() { return targetId; }
+    public void setTargetId(String targetId) { this.targetId = targetId; }
 
     public String getReason() { return reason; }
     public void setReason(String reason) { this.reason = reason; }

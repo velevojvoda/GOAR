@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Ingredient {
-    private long id;
+    private String id;
     private String name;
     private IngredientCategory category;
     private MeasurementUnit defaultUnit;
@@ -14,7 +14,7 @@ public class Ingredient {
     private IngredientType type;
     private List<Allergen> allergens = new ArrayList<>();
 
-    public Ingredient(long id, String name, IngredientCategory category,
+    public Ingredient(String id, String name, IngredientCategory category,
                       MeasurementUnit defaultUnit, IngredientType type) {
         this.id = id;
         this.name = name;
@@ -25,8 +25,8 @@ public class Ingredient {
 
     public boolean isBranded() { return type == IngredientType.BRANDED; }
 
-    public long getId() { return id; }
-    public void setId(long id) { this.id = id; }
+    public String getId() { return id; }
+    public void setId(String id) { this.id = id; }
 
     public String getName() { return name; }
     public void setName(String name) { this.name = name; }

@@ -3,7 +3,7 @@ package com.example.goar.data.model;
 import java.time.LocalDate;
 
 public class PantryItem {
-    private long id;
+    private String id;
     private Ingredient ingredient;
     private String brand;
     private Double quantity;
@@ -11,13 +11,13 @@ public class PantryItem {
     private LocalDate expiryDate;
     private String barcode;
 
-    public PantryItem(long id, Ingredient ingredient) {
+    public PantryItem(String id, Ingredient ingredient) {
         this.id = id;
         this.ingredient = ingredient;
     }
 
-    public long getId() { return id; }
-    public void setId(long id) { this.id = id; }
+    public String getId() { return id; }
+    public void setId(String id) { this.id = id; }
 
     public Ingredient getIngredient() { return ingredient; }
     public void setIngredient(Ingredient ingredient) { this.ingredient = ingredient; }

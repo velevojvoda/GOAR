@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ShoppingList {
-    private long id;
+    private String id;
     private String name;
     private LocalDateTime createdAt;
     private LocalDateTime plannedDateTime;
@@ -13,7 +13,7 @@ public class ShoppingList {
     private boolean archived;
     private List<ShoppingListItem> items = new ArrayList<>();
 
-    public ShoppingList(long id, String name, LocalDateTime createdAt) {
+    public ShoppingList(String id, String name, LocalDateTime createdAt) {
         this.id = id;
         this.name = name;
         this.createdAt = createdAt;
@@ -35,8 +35,8 @@ public class ShoppingList {
         return count;
     }
 
-    public long getId() { return id; }
-    public void setId(long id) { this.id = id; }
+    public String getId() { return id; }
+    public void setId(String id) { this.id = id; }
 
     public String getName() { return name; }
     public void setName(String name) { this.name = name; }

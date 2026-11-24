@@ -1,14 +1,14 @@
 package com.example.goar.data.model;
 
 public class CategoryRequest {
-    private long id;
+    private String id;
     private String ingredientName;
     private String proposedName;
     private String explanation;
     private User requester;
     private RequestStatus status;
 
-    public CategoryRequest(long id, String ingredientName, String proposedName,
+    public CategoryRequest(String id, String ingredientName, String proposedName,
                            String explanation, User requester) {
         this.id = id;
         this.ingredientName = ingredientName;
@@ -18,8 +18,8 @@ public class CategoryRequest {
         this.status = RequestStatus.PENDING;
     }
 
-    public long getId() { return id; }
-    public void setId(long id) { this.id = id; }
+    public String getId() { return id; }
+    public void setId(String id) { this.id = id; }
 
     public String getIngredientName() { return ingredientName; }
     public void setIngredientName(String ingredientName) { this.ingredientName = ingredientName; }

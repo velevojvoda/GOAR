@@ -27,7 +27,23 @@
         android:id="@+id/nav_pantry"
         android:name="com.example.goar.ui.fragments.pantry.PantryFragment"
         android:label="@string/title_pantry"
-        tools:layout="@layout/fragment_pantry" />
+        tools:layout="@layout/fragment_pantry">
+        <action
+            android:id="@+id/action_pantry_to_item_form"
+            app:destination="@id/nav_pantry_item_form" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_pantry_item_form"
+        android:name="com.example.goar.ui.fragments.pantry.PantryItemFormFragment"
+        android:label="@string/pantry_add"
+        tools:layout="@layout/fragment_pantry_item_form">
+        <argument
+            android:name="itemId"
+            android:defaultValue="@null"
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
 
     <fragment
         android:id="@+id/nav_shopping"
