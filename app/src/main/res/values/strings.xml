@@ -16,7 +16,6 @@
     <string name="placeholder_home">Home – Student 3</string>
     <string name="placeholder_search">Search – Student 2</string>
     <string name="placeholder_map">Map – Student 3</string>
-    <string name="placeholder_shopping">Shopping lists – Student 2</string>
     <string name="placeholder_profile">Profile – Student 1</string>
     <string name="placeholder_favorites">Favorites – Student 1</string>
     <string name="placeholder_my_reports">My reports – Student 2</string>
@@ -75,4 +74,19 @@
     <string name="pantry_expires">Expires %1$s</string>
     <string name="pantry_expired">Expired %1$s</string>
 
+    <string name="shopping_tab_active">Active</string>
+    <string name="shopping_tab_archive">Archive</string>
+    <string name="shopping_add">New list</string>
+    <string name="shopping_permanent">Permanent</string>
+    <string name="shopping_created">Created %1$s</string>
+    <string name="shopping_planned">Planned %1$s</string>
+    <string name="shopping_progress">%1$d/%2$d purchased</string>
+    <string name="shopping_empty_active">No active shopping lists</string>
+    <string name="shopping_empty_archive">No archived shopping lists</string>
+    <string name="shopping_name">Name</string>
+    <string name="shopping_planned_date">Planned date (optional)</string>
+    <string name="shopping_clear_date">Clear date</string>
+    <string name="shopping_keep_permanent">Keep permanently active</string>
+    <string name="shopping_save">Save</string>
+    <string name="shopping_error_name">Enter a name</string>
 </resources>

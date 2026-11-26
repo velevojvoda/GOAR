@@ -49,7 +49,17 @@
         android:id="@+id/nav_shopping"
         android:name="com.example.goar.ui.fragments.shopping.ShoppingListsFragment"
         android:label="@string/title_shopping"
-        tools:layout="@layout/fragment_shopping_lists" />
+        tools:layout="@layout/fragment_shopping_lists">
+        <action
+            android:id="@+id/action_shopping_to_list_form"
+            app:destination="@id/nav_shopping_list_form" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_shopping_list_form"
+        android:name="com.example.goar.ui.fragments.shopping.ShoppingListFormFragment"
+        android:label="@string/shopping_add"
+        tools:layout="@layout/fragment_shopping_list_form" />
 
     <fragment
         android:id="@+id/nav_profile"
