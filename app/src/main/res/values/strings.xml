@@ -29,6 +29,31 @@
     <string name="navigation_drawer_close">Close navigation menu</string>
     <string name="profile_image">Profile image</string>
 
+
+    <!-- Home (Student 3) -->
+    <string name="home_section_popular">Popular</string>
+    <string name="home_section_newest">Newest</string>
+    <string name="home_section_recently_viewed">Recently viewed</string>
+    <string name="home_section_recently_cooked">Recently cooked</string>
+    <string name="home_section_can_make">I can make</string>
+    <string name="home_desc_popular">Highest rated recipes in the last month</string>
+    <string name="home_desc_newest">Recently published recipes</string>
+    <string name="home_desc_recently_viewed">Recipes you opened in the last 7 days</string>
+    <string name="home_desc_recently_cooked">Recipes you made in cooking mode</string>
+    <string name="home_desc_can_make">Recipes you have all ingredients for</string>
+    <string name="home_empty">No recipes here yet</string>
+    <string name="home_recipe_details_soon">%1$s – recipe details coming soon</string>
+
+    <!-- Recipe card -->
+    <string name="recipe_image">Recipe image</string>
+    <string name="recipe_author">by %1$s</string>
+    <string name="recipe_types">%1$s · %2$s · %3$s</string>
+    <string name="recipe_time_servings">%1$d min · %2$d servings</string>
+    <string name="recipe_rating">★ %1$s (%2$d)</string>
+    <string name="recipe_no_ratings">No ratings yet</string>
+    <string name="recipe_allergens">Contains: %1$s</string>
+    <string name="recipe_no_allergens">No allergens</string>
+
     <string name="pantry_empty">Your pantry is empty</string>
     <string name="pantry_add">Add item</string>
     <string name="pantry_delete">Delete</string>
