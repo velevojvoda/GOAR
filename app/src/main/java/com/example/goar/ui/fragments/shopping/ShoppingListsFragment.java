@@ -36,6 +36,9 @@ public class ShoppingListsFragment extends Fragment {
         viewModel = new ViewModelProvider(this).get(ShoppingListsViewModel.class);
 
         adapter = new ShoppingListAdapter(list -> {
+            Bundle args = new Bundle();
+            args.putString(ShoppingListDetailFragment.ARG_LIST_ID, list.getId());
+            NavHostFragment.findNavController(this).navigate(R.id.action_shopping_to_list_detail, args);
         });
         binding.recyclerLists.setAdapter(adapter);
         binding.fabAdd.setOnClickListener(v -> NavHostFragment.findNavController(this)
