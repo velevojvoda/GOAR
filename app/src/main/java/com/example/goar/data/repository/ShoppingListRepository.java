@@ -58,6 +58,95 @@ public final class ShoppingListRepository {
         return listsLiveData;
     }
 
+    public ShoppingList getListById(String id) {
+        for (ShoppingList list : lists) {
+            if (list.getId().equals(id)) return list;
+        }
+        return null;
+    }
+
+    public boolean setItemPurchased(String listId, String itemId, boolean purchased) {
+        ShoppingList list = getListById(listId);
+        if (list == null) return false;
+        for (ShoppingListItem item : list.getItems()) {
+            if (item.getId().equals(itemId)) {
+                item.setPurchased(purchased);
+                break;
+            }
+        }
+        boolean archived = archiveIfCompleted(list);
+        publish();
+        return archived;
+    }
+
+    public void addItem(String listId, ShoppingListItem item) {
+        ShoppingList list = getListById(listId);
+        if (list == null) return;
+        item.setId(UUID.randomUUID().toString());
+        list.getItems().add(item);
+        publish();
+    }
+
+    public void updateItem(String listId, String itemId, Double quantity, MeasurementUnit unit) {
+        ShoppingList list = getListById(listId);
+        if (list == null) return;
+        for (ShoppingListItem item : list.getItems()) {
+            if (item.getId().equals(itemId)) {
+                item.setQuantity(quantity);
+                item.setUnit(unit);
+                break;
+            }
+        }
+        publish();
+    }
+
+    public void deleteItem(String listId, String itemId) {
+        ShoppingList list = getListById(listId);
+        if (list == null) return;
+        list.getItems().removeIf(item -> item.getId().equals(itemId));
+        publish();
+    }
+
+    public boolean markAllPurchased(String listId) {
+        ShoppingList list = getListById(listId);
+        if (list == null) return false;
+        for (ShoppingListItem item : list.getItems()) {
+            item.setPurchased(true);
+        }
+        boolean archived = archiveIfCompleted(list);
+        publish();
+        return archived;
+    }
+
+    public void setArchived(String listId, boolean archived) {
+        ShoppingList list = getListById(listId);
+        if (list == null) return;
+        list.setArchived(archived);
+        publish();
+    }
+
+    public String copyList(String listId) {
+        ShoppingList original = getListById(listId);
+        if (original == null) return null;
+
+        ShoppingList copy = createList(original.getName(), LocalDateTime.now());
+        copy.setPermanent(original.isPermanent());
+        for (ShoppingListItem item : original.getItems()) {
+            copy.getItems().add(createItem(item.getIngredient(), item.getQuantity(), item.getUnit(), false));
+        }
+        lists.add(copy);
+        publish();
+        return copy.getId();
+    }
+
+    private boolean archiveIfCompleted(ShoppingList list) {
+        if (list.isCompleted() && !list.isPermanent() && !list.isArchived()) {
+            list.setArchived(true);
+            return true;
+        }
+        return false;
+    }
+
     public void add(ShoppingList list) {
         list.setId(UUID.randomUUID().toString());
         lists.add(list);

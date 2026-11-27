@@ -89,4 +89,23 @@
     <string name="shopping_keep_permanent">Keep permanently active</string>
     <string name="shopping_save">Save</string>
     <string name="shopping_error_name">Enter a name</string>
+    <string name="shopping_details">Shopping list</string>
+    <string name="shopping_mark_all">Mark all as purchased</string>
+    <string name="shopping_no_items">No items in this list</string>
+    <string name="shopping_archived_info">Archived list – view only</string>
+    <string name="shopping_add_item">Add item</string>
+    <string name="shopping_edit_item">Edit item</string>
+    <string name="shopping_delete_item">Delete item</string>
+    <string name="shopping_ingredient">Ingredient</string>
+    <string name="shopping_quantity">Quantity</string>
+    <string name="shopping_unit">Unit</string>
+    <string name="shopping_error_ingredient">Choose an ingredient from the list</string>
+    <string name="shopping_error_quantity">Enter a quantity greater than 0</string>
+    <string name="shopping_archive">Archive</string>
+    <string name="shopping_reactivate">Reactivate</string>
+    <string name="shopping_copy">Create new list from this</string>
+    <string name="shopping_auto_archived">Shopping completed. The list was moved to the archive.</string>
+    <string name="shopping_archived">List archived</string>
+    <string name="shopping_reactivated">List reactivated</string>
+    <string name="shopping_copied">New list created</string>
 </resources>
